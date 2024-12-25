@@ -1,0 +1,36 @@
+.rating-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-progress-bar {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+circle {
+  fill: none;
+  stroke-width: 10;
+}
+
+.background-circle {
+  stroke: #e6e6e6;
+}
+
+.foreground-circle {
+  stroke: #4caf50;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1s ease;
+}
+
+.rating-text {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}

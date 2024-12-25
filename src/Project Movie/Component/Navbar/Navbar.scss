@@ -1,0 +1,128 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #222;
+  color: #fff;
+  position: relative;
+
+  button {
+    height: 30px;
+    position: relative;
+    bottom: 5px;
+    width: 100px;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  &__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  &__links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    &.open {
+      display: block;
+    }
+
+    &__item {
+      margin-right: 20px;
+
+      a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: color 0.3s;
+
+        &:hover {
+          color: #f39c12;
+        }
+      }
+    }
+  }
+
+  &__toggle {
+    display: none;
+    cursor: pointer;
+
+    &-line {
+      width: 25px;
+      height: 3px;
+      margin: 5px 0;
+      background-color: #fff;
+      transition: 0.3s;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .navbar__links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: #333;
+      padding: 10px 20px;
+      border-radius: 8px;
+      width: 200px;
+
+      &.open {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: 100%;
+        text-align: center;
+        height: 100vh;
+        position: absolute;
+        left: 0px;
+      }
+
+      &__item {
+        margin: 10px 0;
+      }
+    }
+
+    .navbar__toggle {
+      display: block;
+    }
+  }
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.dropdown-genres {
+  position: relative;
+  top: 10px;
+  padding: 0px 10px;
+  border: none;
+}
+
+.navbar-input {
+  height: 30px;
+  border: none;
+  border-radius: 20px;
+  position: relative;
+  top: 6px;
+  text-align: center;
+}
+
+select {
+  height: 30px;
+  border-radius: 40px;
+  width: 150px;
+  position: relative;
+  top: -5px;
+  text-align: center;
+}

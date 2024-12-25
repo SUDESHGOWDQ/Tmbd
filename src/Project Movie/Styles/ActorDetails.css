@@ -1,0 +1,30 @@
+.actor-details {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  background: #333;
+}
+
+.actor-details-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.right,
+.left {
+  height: 400px;
+  width: 49%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.right {
+  flex-direction: column;
+  color: white;
+}
