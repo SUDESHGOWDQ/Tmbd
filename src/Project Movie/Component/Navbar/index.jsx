@@ -53,9 +53,7 @@ const Navbar = ({
         </Link>
       </ul>
       <div className="navbar__toggle" onClick={handleMenuToggle}>
-        <div className="navbar__toggle-line"></div>
-        <div className="navbar__toggle-line"></div>
-        <div className="navbar__toggle-line"></div>
+        😊
       </div>
     </nav>
   );
