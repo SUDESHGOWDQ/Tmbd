@@ -39,42 +39,39 @@ const MovieDetails = () => {
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         backgroundSize: "cover",
-        height: "100vh",
         width: "100%",
       }}
     >
-      <div className="left">
-        {movie.poster_path && (
-          <img
-            src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-            alt={movie.title}
-            className="movie-details-poster"
-          />
-        )}
-      </div>
-      <div className="right">
-        <h1 className="movie-details-content">{movie.title}</h1>
-        <p className="movie-details-content">
-          <strong>Release Date:</strong> {movie.release_date}
-        </p>
-        <p className="movie-details-content">
-          <strong>Genres:</strong>{" "}
-          {movie.genres.map((genre) => genre.name).join(", ")}
-        </p>
-        <div className="rating-container movie-details-content">
-          <Rating rating={movie.vote_average} />
+      <div className="movie-details-container">
+        <div className="left">
+          {movie.poster_path && (
+            <img
+              src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+              alt={movie.title}
+              className="movie-details-poster"
+            />
+          )}
         </div>
+        <div className="right">
+          <h1 className="movie-details-content">{movie.title}</h1>
+          <p className="movie-details-content">
+            <strong>Release Date:</strong> {movie.release_date}
+          </p>
+          <p className="movie-details-content">
+            <strong>Genres:</strong>{" "}
+            {movie.genres.map((genre) => genre.name).join(", ")}
+          </p>
+          <div className="rating-container movie-details-content">
+            <Rating rating={movie.vote_average} />
+          </div>
 
-        <p className="movie-details-content">
-          {movie.overview}
-          <button className="movie-btn-trailer" onClick={openModal}>
-            Play Trailer
-          </button>
-        </p>
-
-        <p className="movie-details-content">
-          <MovieCast movieId={movieId} />
-        </p>
+          <p className="movie-details-content">
+            {movie.overview}
+            <button className="movie-btn-trailer" onClick={openModal}>
+              Play Trailer
+            </button>
+          </p>
+        </div>
         <Modal isOpen={isModalOpen} onClose={closeModal}>
           <div className="movie-trailer">
             <h2>Watch the Trailer</h2>
@@ -91,6 +88,9 @@ const MovieDetails = () => {
           </div>
         </Modal>
       </div>
+      <p>
+        <MovieCast movieId={movieId} />
+      </p>
     </div>
   );
 };

@@ -32,5 +32,5 @@ circle {
   transform: translateX(-50%);
   font-size: 16px;
   font-weight: bold;
-  color: #333;
+  color: red;
 }

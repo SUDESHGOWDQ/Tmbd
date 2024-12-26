@@ -28,7 +28,7 @@ const fetchMoviesByGenre = async (genreId, page = 1) => {
 };
 
 // Fetch popular movies
-const fetchPopularMovies = async (page = 10) => {
+const fetchPopularMovies = async (page = 1) => {
   const response = await axios.get(`${BASE_URL}/movie/popular`, {
     params: {
       api_key: API_KEY,
@@ -38,6 +38,8 @@ const fetchPopularMovies = async (page = 10) => {
   });
   return response.data;
 };
+
+console.log(fetchPopularMovies());
 
 // Fetch details of a specific movie
 const fetchMovieDetails = async (movieId) => {

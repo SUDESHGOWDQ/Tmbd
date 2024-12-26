@@ -32,7 +32,7 @@ const MovieCast = ({ movieId }) => {
         {cast.length === 0 ? (
           <p>No cast information available.</p>
         ) : (
-          cast.slice(0, 5).map((actor) => (
+          cast.slice(0, 8).map((actor) => (
             <div key={actor.id} className="actor-card">
               <Link to={`/actor/${actor.id}`} className="actor-link">
                 <img

@@ -1,5 +1,5 @@
 .movie-Loader {
-  height: 100vh;
+  height: auto;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -7,12 +7,21 @@
   background: #333;
 }
 
+.movie-details-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  margin: 100px 50px;
+}
+
 .movie-details {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  height: 100vh;
+  height: auto;
   width: 100%;
   background: black;
 
@@ -52,5 +61,34 @@
     background: transparent;
     text-align: justify;
     height: 300px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .movie-details {
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    .movie-details-poster {
+      height: 300px;
+    }
+
+    .movie-details-container {
+      height: auto;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .right {
+      width: 100%;
+    }
+    .left {
+      margin-bottom: 100px;
+    }
   }
 }
